@@ -90,11 +90,11 @@ public class CalculadoraJPanel extends JPanel  {
 		PantallaNumero2.addFocusListener(new Foco());
 	}
 
-	public void ponerBoton(String rotulo, ActionListener oyente) {
+	public void ponerBoton(String NombreBoton, ActionListener Evento) {
 
-		JButton boton = new JButton(rotulo);
+		JButton boton = new JButton(NombreBoton);
 		
-		boton.addActionListener(oyente);
+		boton.addActionListener(Evento);
 
 		Milamina2.add(boton);
 	}
