@@ -6,7 +6,7 @@ public class CalculadoraMain {
 
 	public static void main(String[] args) {
 
-		CalculadoraJFrame mimarco = new CalculadoraJFrame();
+		CalculadoraJFrame MarcoCalculadora = new CalculadoraJFrame();
 	}
 
 }

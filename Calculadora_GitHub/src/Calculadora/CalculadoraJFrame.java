@@ -6,9 +6,9 @@ public class CalculadoraJFrame extends JFrame {
 
 	public CalculadoraJFrame() {
 
-		CalculadoraJPanel milamina = new CalculadoraJPanel();
+		CalculadoraJPanel LaminaCalculadora = new CalculadoraJPanel();
 
-		add(milamina);
+		add(LaminaCalculadora);
 		
 		setTitle("Calculadora");
 
