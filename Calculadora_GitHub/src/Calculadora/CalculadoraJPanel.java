@@ -72,15 +72,11 @@ public class CalculadoraJPanel extends JPanel  {
 
 		ponerBoton("0", IntroducirNumero);
 		ponerBoton(".", IntroducirNumero);
-		ponerBoton("AC", new ActionListener() {
-
-			public void actionPerformed(ActionEvent arg0) {
-				
-				PantallaNumero1.setText("");
-				PantallaNumero2.setText("");
-				PantallaResultado.setText("");
-			}
-
+		ponerBoton("AC", arg0 -> {
+			
+			PantallaNumero1.setText("");
+			PantallaNumero2.setText("");
+			PantallaResultado.setText("");
 		});
 		
 		ponerBoton("+", IntroducirOperacion);
@@ -123,9 +119,15 @@ public class CalculadoraJPanel extends JPanel  {
 			String entrada = e.getActionCommand();
 
 			if (FocoPantalla1) {
-				PantallaNumero1.setText(PantallaNumero1.getText() + entrada);
+				StringBuilder stringBuilder = new StringBuilder();
+				stringBuilder.append(PantallaNumero1.getText());
+				stringBuilder.append(entrada);
+				PantallaNumero1.setText(stringBuilder.toString());
 			} else if (FocoPantalla2) {
-				PantallaNumero2.setText(PantallaNumero2.getText() + entrada);
+				StringBuilder stringBuilder = new StringBuilder();
+				stringBuilder.append(PantallaNumero2.getText());
+				stringBuilder.append(entrada);
+				PantallaNumero2.setText(stringBuilder.toString());
 			}
 		}
 
@@ -180,7 +182,10 @@ public class CalculadoraJPanel extends JPanel  {
 				PantallaNumero1.setText("operacion incorrecta");
 			}
 			
-			PantallaResultado.setText("" + Resultado);
+			StringBuilder stringBuilder = new StringBuilder();
+			stringBuilder.append("");
+			stringBuilder.append(Resultado);
+			PantallaResultado.setText(stringBuilder.toString());
 		}
 
 	}
