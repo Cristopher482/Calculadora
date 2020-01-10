@@ -14,7 +14,7 @@ public class CalculadoraJFrame extends JFrame {
 
 		setBounds(500, 300, 450, 300);
 		
-		pack();
+		//pack();
 		
 		setLocationRelativeTo(null);
 		

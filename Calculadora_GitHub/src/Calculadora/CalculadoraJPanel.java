@@ -74,9 +74,8 @@ public class CalculadoraJPanel extends JPanel  {
 		ponerBoton(".", IntroducirNumero);
 		ponerBoton("AC", arg0 -> {
 			
-			PantallaNumero1.setText("");
-			PantallaNumero2.setText("");
-			PantallaResultado.setText("");
+			borrarInformacion();
+
 		});
 		
 		ponerBoton("+", IntroducirOperacion);
@@ -84,6 +83,14 @@ public class CalculadoraJPanel extends JPanel  {
 		PantallaNumero1.addFocusListener(new Foco());
 
 		PantallaNumero2.addFocusListener(new Foco());
+	}
+
+	public void borrarInformacion() {
+		
+		PantallaNumero1.setText("");
+		PantallaNumero2.setText("");
+		PantallaResultado.setText("");
+		
 	}
 
 	public void ponerBoton(String NombreBoton, ActionListener Evento) {
